@@ -1,0 +1,197 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: #000;
+}
+
+.loaders {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(1fr);
+    gap: 10px;
+}
+
+.loaders .first_loader,
+.second_loader,
+.third_loader,
+.fourth_loader,
+.fifth_loader,
+.sixth_loader {
+    background: #222b32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaders .first_loader {
+    border-radius: 0 0 15px 0;
+}
+
+.loaders .second_loader {
+    border-radius: 0 0 15px 15px;
+}
+
+.loaders .third_loader {
+    border-radius: 0 0 0 15px;
+}
+
+.loaders .fourth_loader {
+    border-radius: 0 15px 0 0;
+}
+
+.loaders .fifth_loader {
+    border-radius: 15px 15px 0 0;
+}
+.loaders .sixth_loader {
+    border-radius: 15px 0 0 0;
+}
+
+.loaders .first_loader .loader {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-top: 5px solid red;
+    background: transparent;
+    animation: first 700ms infinite linear;
+}
+
+@keyframes first {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+.loaders .second_loader .loader {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-top: 5px solid transparent;
+    background: transparent;
+    animation: second 700ms infinite linear;
+}
+
+@keyframes second {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+.loaders .third_loader .loader {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-top: 5px solid transparent;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: second 700ms infinite linear;
+}
+
+.loaders .third_loader .loader::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 5px solid transparent;
+    border-top: 5px solid red;
+    border-radius: 50%;
+    animation: second_rotate 700ms infinite linear;
+}
+
+@keyframes second_rotate {
+    from {
+        rotate: 360deg;
+    }
+    to {
+        rotate: -360deg;
+    }
+}
+
+.loaders .fourth_loader .loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    position: relative;
+}
+
+.loaders .fourth_loader .loader::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid transparent;
+    border-top: 3px solid red;
+    animation: second 700ms infinite linear;
+}
+
+.loaders .fifth_loader .loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    position: relative;
+}
+
+.loaders .fifth_loader .loader::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    animation: second 700ms infinite linear;
+    border-left: 3px solid red;
+}
+
+.loaders .sixth_loader .loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: second 700ms infinite linear;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+}
+
+.loaders .sixth_loader .loader::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-left: 3px solid red;
+    border-right: 3px solid red;
+}
