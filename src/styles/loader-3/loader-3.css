@@ -1,0 +1,45 @@
+.loaders .loader-3 {
+    background: #222b32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaders .loader-3 {
+    border-radius: 0 0 15px 15px;
+}
+
+.loaders .loader-3 .loader {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    border: 5px solid white;
+    border-top: 5px solid transparent;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: second 700ms infinite linear;
+}
+
+.loaders .loader-3 .loader::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 5px solid transparent;
+    border-top: 5px solid red;
+    border-radius: 50%;
+    animation: second_rotate 700ms infinite linear;
+}
+
+@keyframes second_rotate {
+    from {
+        rotate: 360deg;
+    }
+    to {
+        rotate: -360deg;
+    }
+}

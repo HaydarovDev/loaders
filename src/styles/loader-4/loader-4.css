@@ -1,0 +1,33 @@
+.loaders .loader-4 {
+    background: #222b32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaders .loader-4 {
+    border-radius: 0 0 0 15px;
+}
+
+.loaders .loader-4 .loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    position: relative;
+}
+
+.loaders .loader-4 .loader::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    border: 3px solid transparent;
+    border-top: 3px solid red;
+    animation: second 700ms infinite linear;
+}

@@ -1,0 +1,53 @@
+.loaders .loader-7 {
+    background: #222b32;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaders .loader-7 {
+    border-radius: 15px 15px 0 0;
+}
+
+.loaders .loader-7 .loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.loaders .loader-7::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: red;
+    border-radius: 50%;
+}
+
+.loaders .loader-7 .loader::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 50%;
+    background: red;
+    border-radius: 2px;
+    transform-origin: top;
+    animation: second 3000ms infinite linear;
+}
+
+.loaders .loader-7 .loader::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 3px;
+    height: 30%;
+    background: red;
+    border-radius: 2px;
+    transform-origin: bottom;
+    animation: second 11000ms infinite linear;
+}
