@@ -1,12 +1,7 @@
 .loaders .loader-7 {
-    background: #222b32;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.loaders .loader-7 {
-    border-radius: 15px 15px 0 0;
 }
 
 .loaders .loader-7 .loader {

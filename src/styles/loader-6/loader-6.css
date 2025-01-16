@@ -1,12 +1,7 @@
 .loaders .loader-6 {
-    background: #222b32;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.loaders .loader-6 {
-    border-radius: 15px 15px 0 0;
 }
 
 .loaders .loader-6 .loader {
@@ -24,8 +19,8 @@
 .loaders .loader-6 .loader::before {
     content: "";
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
     border: 3px solid transparent;
     border-left: 3px solid red;

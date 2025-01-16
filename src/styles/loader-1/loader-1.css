@@ -1,9 +1,4 @@
 .loaders .loader-1 {
-    border-radius: 0 0 15px 0;
-}
-
-.loaders .loader-1 {
-    background: #222b32;
     display: flex;
     justify-content: center;
     align-items: center;
