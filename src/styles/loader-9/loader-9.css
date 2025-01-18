@@ -1,0 +1,26 @@
+.loaders .loader-9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaders .loader-9 .loader {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid white;
+    animation: first 2000ms infinite linear;
+}
+
+.loaders .loader-9 .loader::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+}

@@ -36,7 +36,7 @@
 .loaders .loader-8 span {
     width: 2px;
     height: 30px;
-    background: red;
+    background: white;
     margin: 3px;
     animation: translateY 900ms infinite linear;
     transform: translateY(-3px);
